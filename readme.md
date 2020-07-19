@@ -120,6 +120,8 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - PATCH "/students/int:student_id"  -   used to change details of specific stydents details
 - DELETE "/students/int:student_id" - used to delete a specific student data
 - DELETE "/teachers/int:teacher_id" - used to delete a specific teacher
+- POST "/search/students" - used to search a specific student with it's name as search term
+
 
 ##### GET '/teachers'
 
