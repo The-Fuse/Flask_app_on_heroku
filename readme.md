@@ -85,7 +85,7 @@ The Coaching institute a company that is responsible for  taking admission of st
 
 #### Models:
 
-There are two models in the projects for movies and actors respectively-
+There are two models in the projects for teachers and students respectively-
 
 - Teachers with attributes name and  age
 - Students with attributes name, age and gender
