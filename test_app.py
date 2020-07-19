@@ -103,7 +103,7 @@ class CoachingInstitutedatatest(unittest.TestCase):
     # TEST for teacher not found while patching
     def test_400_teacher_not_present_for_patching(self):
         teacher_details = {
-            'title': "Miliand",
+            'name': "Miliand",
             'age': "22"
         }
 
