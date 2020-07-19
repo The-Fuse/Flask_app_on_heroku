@@ -287,7 +287,7 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### POST "/search/studentsd"
+##### POST "/search/students"
 - Search a specific student from database
 - Request Arguments: Present  
 - Response Body:
