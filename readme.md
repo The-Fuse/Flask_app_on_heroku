@@ -276,7 +276,7 @@ Since the application don't have a frontend, you can use curl or postman to use 
 ```
 
 ##### DELETE "/students/int:student_id"
-- Delete a specific actor from database
+- Delete a specific student from database
 - Request Arguments: Present
     student_id: ID of the student  
 - Response Body:
