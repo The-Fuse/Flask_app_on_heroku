@@ -123,18 +123,18 @@ There are two models in the projects for movies and actors respectively-
 For using these endpoints, you have to send a jwt token with each request and with appropriate permissions to access that particular endpoints. I have already added tokens in the 'JWT tokens' section of this readme.
 Since the application don't have a frontend, you can use curl or postman to use these endpoints.
 
-- GET '/movies' - used to get all movies
-- GET "/actors" - used to get all actors
-- POST "/movies" - used to add more movies
-- POST "/actors" - used to add more actors
-- PATCH "/movies/int:movie_id"  -   used to change details of specific movie
-- PATCH "/actors/int:actor_id"  -   used to change details of specific actor
-- DELETE "/movies/int:movie_id" - used to delete a specific movie
-- DELETE "/actors/int:actor_id" - used to delete a specific actor
+- GET '/students' - used to get all students
+- GET "/teachers" - used to get all teachers
+- POST "/teachers" - used to add more teachers
+- POST "/students" - used to add more students
+- PATCH "/teachers/int:teacher_id"  -   used to change details of specific teacher details
+- PATCH "/students/int:student_id"  -   used to change details of specific stydents details
+- DELETE "/students/int:student_id" - used to delete a specific student data
+- DELETE "/teachers/int:teacher_id" - used to delete a specific teacher
 
-##### GET '/movies'
+##### GET '/teachers'
 
-- Fetches a dictionary of movies with key:value pair of total number of movies.
+- Fetches a dictionary of teachers with key:value pair of total number of teachers.
 - Request Arguments: None
 - Permission: required
 - Returns:
@@ -154,8 +154,8 @@ Since the application don't have a frontend, you can use curl or postman to use 
 ```
 
 
-##### GET "/actors"
-- Fetches a dictionary of all actors with key:value pair of total number of actors
+##### GET "/students"
+- Fetches a dictionary of all students with key:value pair of total number of students
 - Request Arguments: None
 - Permission: required
 - Returns:
@@ -174,11 +174,11 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### POST "/movies"
-- Adds a new movie to the database
+##### POST "/teachers"
+- Adds a new teacher details to the database
 - Request Arguments: required
-    - title : title of movie
-    - release : releasing date of movie
+    - name : name of the teacher
+    - age : age of the teacher
 - Permission: required
 - Returns :
 ```
@@ -194,13 +194,13 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### POST "/actors"
-- Adds a new actor to the database
+##### POST "/students"
+- Addmits a new student to the database
 - Request Arguments: required
-    - name : name of actor
-    - age : age of actor
-    - gender : gender of actor
-    - movie_id : movie to which actor is related
+    - name : name of student
+    - age : age of age of the student
+    - gender : gender of student
+    - teacher_id : teacher_id of teacher alloted
 - Permission: required
 - Returns :
 ```
@@ -217,10 +217,10 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### PATCH "/movies/int:movie_id"
-- Used to change details of a specific movie
+##### PATCH "/teachers/int:teacher_id"
+- Used to change details of a specific teacher details
 - Request Parameters: Present
-    movie_id: movie ID needed to be changed
+    teacher_id: teacher ID needed to be changed
 - Returns :
 ```
 {
@@ -235,10 +235,10 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### PATCH "/actors/int:actor_id"
-- Used to change details of a specific actor
+##### PATCH "/students/int:student_id"
+- Used to change details of a specific student
 - Request Parameters: Present
-    actor_id: actor ID needed to be changed
+    student_id: student ID needed to be changed
 - Returns :
 ```
 {
@@ -254,10 +254,10 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### DELETE "/movies/int:movie_id"
-- Delete a specific movie from database
+##### DELETE "/teachers/int:teacher_id"
+- Delete a specific teacher data from database
 - Request Arguments: Present
-    movie_id: ID of the movie
+    teacher_id: ID of the teacher
 - Response Body:
 ```
 {
@@ -266,10 +266,10 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
-##### DELETE "/actors/int:actor_id"
+##### DELETE "/students/int:student_id"
 - Delete a specific actor from database
 - Request Arguments: Present
-    actor_id: ID of the actor
+    student_id: ID of the student  
 - Response Body:
 ```
 {
