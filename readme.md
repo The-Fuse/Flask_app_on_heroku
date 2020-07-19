@@ -287,3 +287,14 @@ Since the application don't have a frontend, you can use curl or postman to use 
 }
 ```
 
+##### POST "/search/studentsd"
+- Search a specific student from database
+- Request Arguments: Present  
+- Response Body:
+```
+{
+    "message": "Students are found",
+    "success": true
+}
+```
+
