@@ -9,10 +9,14 @@ But Principal has all the permissions to change, add, update , search or delete 
 
 The permission tokens are added under 'JWT Tokens' section of readme.
 
-All the endpoints and their implementations are added under 'Endpoints' section of readme. However to use them, you have to use postman or curl, since the app doesn't have any frontend yet.
+All the endpoints and their implementations are added under 'Endpoints' section of readme. However to use them, you have to use postman or curl.
 
-The app is hosted on heroku and the url for the same is as follows-
-**Application URL - https://coaching123.herokuapp.com/ **
+## DEPLOYMENT
+The app is hosted live on heroku at the URL: 
+http://coaching123.herokuapp.com/
+
+However, there is no frontend for this app yet, and it can only be presently used to authenticate using Auth0 by entering
+credentials and retrieving a fresh token to use with curl or postman.
 
 ## THIRD-PARTY AUTHENTICATION
 #### auth.py
