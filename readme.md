@@ -140,15 +140,23 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Returns:
 ``` 
 {
-    "Total number of movies": 1,
-    "movies": [
+    "Teachers": [
         {
-            "actors": [2],
+            "Name": "Rohit Kumar",
+            "age": 20,
             "id": 1,
-            "release_date": "Wed, 13 Oct 2010 00:00:00 GMT",
-            "title": "Universe"
-        },
+            "students": [
+                {
+                    "age": 44,
+                    "gender": "Male",
+                    "id": 1,
+                    "name": "Duke Stark",
+                    "teacher_id": 1
+                }
+            ]
+        }
     ],
+    "Total number of teachers": 1,
     "success": true
 }
 ```
@@ -161,15 +169,16 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Returns:
 ```
 {
-    "All Actors": [
+    "Students": [
         {
-            'name' : 'Robert Downey Jr',
-            'age': 44,
-            'gender': 'Male',
-            'movie_id': 4
+            "age": 44,
+            "gender": "Male",
+            "id": 1,
+            "name": "Duke Stark",
+            "teacher_id": 1
         }
     ],
-    "Total number of actors": 0,
+    "Total number of students": 1,
     "success": true
 }
 ```
@@ -183,14 +192,14 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Returns :
 ```
 {
-    "message": "movie added successfully",
-    "movie added": {
-        "actors": [],
-        "id": 5,
-        "release_date": "Mon, 10 Feb 2014 00:00:00 GMT",
-        "title": "Godfather"
-    },
-    "success": true
+    "message": "Teacher details added successfully",
+    "success": true,
+    "teacher added": {
+        "Name": "Rohit Kumar",
+        "age": 20,
+        "id": 1,
+        "students": []
+    }
 }
 ```
 
@@ -205,14 +214,14 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Returns :
 ```
 {
-    "actor added": {
+    "message": "Student addmitted successfully",
+    "student added": {
         "age": 44,
         "gender": "Male",
         "id": 1,
-        "movie_id": 2,
-        "name": "Robert Downey Jr"
+        "name": "Duke Stark",
+        "teacher_id": 1
     },
-    "message": "actor added successfully",
     "success": true
 }
 ```
@@ -224,13 +233,13 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Returns :
 ```
 {
-    "success": True,
-    "message": "update successfull",
-    "movie changed to ":{
-        "actors": [],
-        "id": 2,
-        "release_date": "Mon, 24 Feb 2002 00:00:00 GMT",
-        "title": "Son of Justice"
+    "message": "Teachers details updated successfull",
+    "success": true,
+    "teacher details changed to ": {
+        "Name": Changed name,
+        "age": 20,
+        "id": null,
+        "students": []
     }
 }
 ```
@@ -242,15 +251,15 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Returns :
 ```
 {
-    "actor changed to ":{
-        "age": 32,
-        "gender": "Male",
-        "id": 12,
-        "movie_id": 4,
-        "name": "Alpha Dude"
-    }
-    "success": True,
     "message": "update successfull",
+    "student details changed to ": {
+        "age": 18,
+        "gender": "Female",
+        "id": 1,
+        "name": "Duke Stark",
+        "teacher_id": 1
+    },
+    "success": true
 }
 ```
 
@@ -261,8 +270,8 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Response Body:
 ```
 {
-    'success': True,
-    'deleted': 5
+    "deleted": 2,
+    "success": true
 }
 ```
 
@@ -273,8 +282,8 @@ Since the application don't have a frontend, you can use curl or postman to use 
 - Response Body:
 ```
 {
-    'success': True,
-    'deleted': 5
+    "deleted": 1,
+    "success": true
 }
 ```
 
